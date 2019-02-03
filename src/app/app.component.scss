@@ -1,14 +1,17 @@
+
 .content { 
   width: 500px;
   height: 500px;
   text-align: center;
   padding: 50px;
   margin: auto;
+  font-family: 'Fjalla On';
 }
 .progress-wrapper {
   position: relative;
   margin: 20px auto;
   font-size: 20px;
+  font-family: 'Fjalla On';
 
   .text {
     position: absolute;
@@ -21,6 +24,7 @@
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     font-size: 26px;
+    font-family: 'Fjalla On';
   }
 
 }
@@ -32,6 +36,7 @@ round-progress {
 .controls-wrapper {
   text-align: center;
   margin: auto;
+  font-family: 'Fjalla On';
 }
 
 .input { 
@@ -40,4 +45,5 @@ round-progress {
   max-width: 250px;
   display: block;
   margin-bottom: 10px;
+  font-family: 'Fjalla On';
 }

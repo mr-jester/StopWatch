@@ -23,7 +23,7 @@ export class AppComponent {
 
   /// Start the timer
   start() {
-    const interval = Observable.interval(100);
+    const interval = Observable.interval(5500);
 
     interval
       .takeWhile(_ => !this.isFinished)
