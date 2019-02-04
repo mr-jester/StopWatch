@@ -47,7 +47,7 @@ export class AppComponent {
     speechSynthesis.speak(speech);
     setTimeout(()=>{
       location.reload();
-    }, 10000);
+    }, 17000);
   }
 
   /// reset timer
