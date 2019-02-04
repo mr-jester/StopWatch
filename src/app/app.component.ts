@@ -23,7 +23,7 @@ export class AppComponent {
 
   /// Start the timer
   start() {
-    const interval = Observable.interval(5500);
+    const interval = Observable.interval(100);
 
     interval
       .takeWhile(_ => !this.isFinished)
@@ -36,6 +36,20 @@ export class AppComponent {
     this.current = this.max;
   }
 
+  speaker(){
+    let speech = new SpeechSynthesisUtterance();
+    speech.rate = .7;
+    speech.pitch = 1;
+    speech.volume = 1;
+    speech.voice = speechSynthesis.getVoices()[0];
+    speech.text = `It is time for hourly update on incident ${this.text}`
+    
+    speechSynthesis.speak(speech);
+    setTimeout(()=>{
+      location.reload();
+    }, 10000);
+  }
+
   /// reset timer
   reset() {
     this.current = 0;
@@ -44,7 +58,7 @@ export class AppComponent {
   /// Getters to prevent NaN errors
 
   get maxVal() {
-    return isNaN(this.max) || this.max < 0.1 ? 0.1 : this.max; 
+    return isNaN(this.max) || this.max < 0.1 ? 0.1 : this.max;
   }
 
   get currentVal() {

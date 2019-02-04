@@ -1,5 +1,5 @@
 <main class="content">
-  <input type="text" [value]="text" (input)= "updateValue($event)">
+  <input type="text" class="input" [value]="text" (input)= "updateValue($event)">
   <h1>{{text}}</h1>
 
   <div class="progress-wrapper" *ngIf="maxVal">
@@ -8,9 +8,9 @@
       {{ max - current | number: '1.1-1' }}
     </div>
 
-    <div class="text" *ngIf="isFinished">
-      ding!
-      <audio src="assets/Handbell-sound.mp3" autoplay></audio>
+    <div class="text" *ngIf="isFinished" >
+        <div>{{speaker()}}</div>
+     ding!
     </div>
 
     <round-progress [max]="max" [current]="current" [radius]="100" [stroke]="25">
